@@ -1,0 +1,415 @@
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Farben */
+:root {
+  --violett-dark: #120a1f;
+  --violett: #6a4ea3;
+  --gold: #d4af37;
+  --gold-soft: #e8c96f;
+  --text-light: #f5f5dc;
+}
+
+/* Grundlayout */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--violett-dark);
+  color: var(--text-light);
+}
+
+/* Header */
+header {
+  background-color: var(--violett-dark);
+  padding: 22px;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 2em;
+  color: var(--gold);
+  letter-spacing: 1px;
+}
+
+/* Navigation – Sticky + Blur */
+nav {
+  background: rgba(18, 10, 31, 0.85);
+  backdrop-filter: blur(6px);
+  text-align: center;
+  padding: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  margin: 0 14px;
+  font-weight: 600;
+  font-size: 0.95em;
+  transition: color 0.2s ease;
+}
+nav a:hover {
+  color: var(--gold);
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 100px 20px 70px;
+  background-image: url('hero_mystic.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+  min-height: 460px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* Dark overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0,0,0,0.75),
+    rgba(0,0,0,0.55)
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Particles */
+.hero .particles {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,0.18) 2px, transparent 3px),
+    radial-gradient(circle, rgba(255,255,255,0.12) 1px, transparent 2px);
+  background-size: 200px 200px, 260px 260px;
+  opacity: 0.25;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Hero Text + Buttons über allem */
+.hero h1,
+.hero p,
+.button,
+.hero-secondary-buttons {
+  position: relative;
+  z-index: 3;
+}
+
+.hero h1 {
+  font-size: 2em;
+  margin-bottom: 12px;
+  line-height: 1.25;
+  animation: glowPulse 6s ease-in-out infinite;
+  color: #fff;
+}
+
+@keyframes glowPulse {
+  0% { text-shadow: 0 0 10px rgba(255,255,255,0.3); }
+  50% { text-shadow: 0 0 18px rgba(255,255,255,0.7); }
+  100% { text-shadow: 0 0 10px rgba(255,255,255,0.3); }
+}
+
+.hero p {
+  font-size: 1.15em;
+  margin-bottom: 20px;
+  opacity: 0.95;
+}
+
+/* BUTTONS – jetzt mit perfekter Icon/Text-Ausrichtung */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 340px;
+  margin: 12px auto;
+  padding: 16px 20px;
+  border-radius: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.05em;
+  transition: 0.25s ease;
+  text-align: center;
+}
+
+/* Icon-Container */
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* SVG-Icons – jetzt größer + goldene Outline */
+.button svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+  filter: drop-shadow(0 0 3px rgba(212,175,55,0.6));
+}
+
+/* Text optisch minimal nach unten korrigieren */
+.button span:not(.icon) {
+  position: relative;
+  top: 1px;
+}
+
+/* Primary Button */
+.button.primary {
+  background: linear-gradient(135deg, #ffe27a, #e8b93f);
+  color: #1a0f2e;
+  border: 2px solid #f7d774;
+  box-shadow:
+    0 0 28px rgba(255, 215, 120, 1),
+    0 8px 28px rgba(0,0,0,0.8);
+  font-weight: 800;
+}
+.button.primary:hover {
+  background: linear-gradient(135deg, #ffeaa0, #f2c86a);
+}
+
+/* Secondary Buttons */
+.button.secondary {
+  background: rgba(0,0,0,0.55);
+  border: 1px solid rgba(255,255,255,0.35);
+  color: #fff;
+  backdrop-filter: blur(4px);
+  font-weight: 600;
+}
+.button.secondary:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* Sektionen */
+section {
+  padding: 50px 22px;
+}
+
+section h2 {
+  color: var(--gold);
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8em;
+  margin-bottom: 22px;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+/* Divider */
+.magic-divider {
+  height: 2px;
+  width: 80%;
+  margin: 40px auto;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: 0.8;
+}
+
+/* Portrait */
+.portrait {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow:
+    0 8px 22px rgba(0,0,0,0.55),
+    0 0 12px rgba(255,255,255,0.08);
+  margin-bottom: 24px;
+  object-fit: cover;
+}
+
+/* Faktenliste */
+.facts {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+.facts li {
+  margin: 8px 0;
+  padding-left: 18px;
+  position: relative;
+}
+.facts li::before {
+  content: "•";
+  color: var(--gold);
+  position: absolute;
+  left: 0;
+}
+
+/* Angebote */
+.angebot {
+  background: rgba(255,255,255,0.06);
+  padding: 22px;
+  margin: 22px 0;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow:
+    0 0 14px rgba(0,0,0,0.35),
+    inset 0 0 12px rgba(255,255,255,0.05);
+}
+.angebot h3 {
+  margin-top: 0;
+  color: var(--gold);
+  font-size: 1.3em;
+  margin-bottom: 8px;
+}
+
+/* Testimonials */
+.testimonial {
+  background: rgba(255,255,255,0.06);
+  padding: 18px;
+  border-radius: 12px;
+  margin: 18px 0;
+  border: 1px solid rgba(255,255,255,0.12);
+  font-style: italic;
+}
+
+/* Fade-In */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Telegram Bubble */
+.telegram-bubble {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  background: linear-gradient(135deg, #ffe27a, #e8b93f);
+  padding: 16px 18px;
+  border-radius: 50%;
+  box-shadow:
+    0 0 28px rgba(255, 215, 120, 1),
+    0 8px 28px rgba(0,0,0,0.8);
+  z-index: 999;
+}
+
+.telegram-bubble svg {
+  width: 28px;
+  height: 28px;
+  display: block;
+  filter: drop-shadow(0 0 4px rgba(212,175,55,0.7));
+}
+
+/* Scroll-to-Top */
+.scroll-top {
+  position: fixed;
+  bottom: 22px;
+  left: 22px;
+  background: rgba(255,255,255,0.15);
+  padding: 10px 14px;
+  border-radius: 50%;
+  color: var(--gold);
+  font-size: 1.2em;
+  text-decoration: none;
+  backdrop-filter: blur(6px);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+body.scrolled .scroll-top {
+  opacity: 1;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 25px;
+  background-color: var(--violett-dark);
+  font-size: 0.9em;
+  color: var(--text-light);
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .hero {
+    padding: 80px 15px 50px;
+    min-height: 380px;
+  }
+
+  .hero h1 {
+    font-size: 1.7em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+
+  .button {
+    font-size: 1em;
+    padding: 14px;
+  }
+
+  nav a {
+    margin: 0 6px;
+    font-size: 0.85em;
+  }
+
+  .portrait {
+    max-height: 260px;
+  }
+}
+/* --- Kontaktbereich optisch zentrieren --- */
+
+#kontakt .facts {
+  padding-left: 0;
+  margin-left: 0;
+  text-align: left;
+  max-width: 320px;      /* verhindert optisches Wandern */
+  margin: 0 auto 20px;   /* zentriert die gesamte Liste */
+}
+
+#kontakt .facts li {
+  padding-left: 22px;    /* Bullet wieder einrücken */
+}
+
+#kontakt .facts li::before {
+  left: 0;               /* Bullet korrekt positionieren */
+}
+/* --- Android Chrome Button-Zentrierung --- */
+
+#kontakt .button {
+  display: flex;          /* statt inline-flex */
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 320px;       /* leicht kleiner, verhindert Chrome-Shift */
+}
+/* --- Android Chrome Fix für Hero-Buttons --- */
+
+.hero .button {
+  display: flex;              /* statt inline-flex */
+  justify-content: center;    /* Icon + Text perfekt zentriert */
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 320px;           /* gleiche Breite wie Kontakt-Button */
+}
+/* Perfekte vertikale Ausrichtung für SVG-Icons */
+.angebot h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Abstand zwischen Icon und Text */
+}
+
+.angebot h3 .icon svg {
+    width: 22px;
+    height: 22px;
+    stroke: #d4af37;
+    flex-shrink: 0;
+}
