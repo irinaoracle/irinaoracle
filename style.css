@@ -37,7 +37,7 @@ header {
 /* Header-Titel soll wie H2 aussehen */
 header .site-title {
   font-family: 'Playfair Display', serif;
-  font-size: 1.9em;          /* minimal größer als section h2 */
+  font-size: 1.8em;          /* minimal größer als section h2 */
   font-weight: 600;
   line-height: 1.28;
   letter-spacing: 0.5px;     /* exakt wie section h2 */
