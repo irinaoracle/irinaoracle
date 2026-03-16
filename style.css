@@ -10,6 +10,13 @@ html {
   --gold: #d4af37;
   --gold-soft: #e8c96f;
   --text-light: #f5f5dc;
+
+  /* Premium Typo Skala */
+  --fs-h1: 1.35rem;
+  --fs-h2: 1.18rem;
+  --fs-h3: 1.02rem;
+  --fs-body: 0.96rem;
+  --fs-small: 0.88rem;
 }
 
 /* Grundlayout */
@@ -25,10 +32,17 @@ header {
   background-color: var(--violett-dark);
   padding: 22px;
   text-align: center;
+}
+
+/* Header-Titel soll wie H2 aussehen */
+header .site-title {
   font-family: 'Playfair Display', serif;
-  font-size: 2em;
+  font-size: 1.9em;          /* minimal größer als section h2 */
+  font-weight: 600;
+  line-height: 1.28;
+  letter-spacing: 0.5px;     /* exakt wie section h2 */
   color: var(--gold);
-  letter-spacing: 1px;
+  margin: 0;
 }
 
 /* Navigation – Sticky + Blur */
@@ -95,7 +109,7 @@ nav a:hover {
   pointer-events: none;
 }
 
-/* Hero Text + Buttons über allem */
+/* Hero Text + Buttons */
 .hero h1,
 .hero p,
 .button,
@@ -105,7 +119,7 @@ nav a:hover {
 }
 
 .hero h1 {
-  font-size: 2em;
+  font-size: 1.15em;
   margin-bottom: 12px;
   line-height: 1.25;
   animation: glowPulse 6s ease-in-out infinite;
@@ -124,7 +138,7 @@ nav a:hover {
   opacity: 0.95;
 }
 
-/* BUTTONS – jetzt mit perfekter Icon/Text-Ausrichtung */
+/* BUTTONS */
 .button {
   display: inline-flex;
   align-items: center;
@@ -142,14 +156,12 @@ nav a:hover {
   text-align: center;
 }
 
-/* Icon-Container */
 .icon {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* SVG-Icons – jetzt größer + goldene Outline */
 .button svg {
   width: 24px;
   height: 24px;
@@ -157,7 +169,6 @@ nav a:hover {
   filter: drop-shadow(0 0 3px rgba(212,175,55,0.6));
 }
 
-/* Text optisch minimal nach unten korrigieren */
 .button span:not(.icon) {
   position: relative;
   top: 1px;
@@ -258,6 +269,9 @@ section h2 {
   color: var(--gold);
   font-size: 1.3em;
   margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 /* Testimonials */
@@ -334,82 +348,207 @@ footer {
   border-top: 1px solid rgba(255,255,255,0.1);
 }
 
-/* Mobile */
-@media (max-width: 600px) {
-  .hero {
-    padding: 80px 15px 50px;
-    min-height: 380px;
-  }
-
-  .hero h1 {
-    font-size: 1.7em;
-  }
-
-  .hero p {
-    font-size: 1em;
-  }
-
-  .button {
-    font-size: 1em;
-    padding: 14px;
-  }
-
-  nav a {
-    margin: 0 6px;
-    font-size: 0.85em;
-  }
-
-  .portrait {
-    max-height: 260px;
-  }
-}
-/* --- Kontaktbereich optisch zentrieren --- */
-
+/* Kontaktbereich */
 #kontakt .facts {
   padding-left: 0;
   margin-left: 0;
   text-align: left;
-  max-width: 320px;      /* verhindert optisches Wandern */
-  margin: 0 auto 20px;   /* zentriert die gesamte Liste */
+  max-width: 320px;
+  margin: 0 auto 20px;
 }
-
 #kontakt .facts li {
-  padding-left: 22px;    /* Bullet wieder einrücken */
+  padding-left: 22px;
 }
-
 #kontakt .facts li::before {
-  left: 0;               /* Bullet korrekt positionieren */
+  left: 0;
 }
-/* --- Android Chrome Button-Zentrierung --- */
-
 #kontakt .button {
-  display: flex;          /* statt inline-flex */
+  display: flex;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  max-width: 320px;       /* leicht kleiner, verhindert Chrome-Shift */
+  max-width: 320px;
 }
-/* --- Android Chrome Fix für Hero-Buttons --- */
 
+/* Hero Buttons Fix */
 .hero .button {
-  display: flex;              /* statt inline-flex */
-  justify-content: center;    /* Icon + Text perfekt zentriert */
+  display: flex;
+  justify-content: center;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  max-width: 320px;           /* gleiche Breite wie Kontakt-Button */
-}
-/* Perfekte vertikale Ausrichtung für SVG-Icons */
-.angebot h3 {
-    display: flex;
-    align-items: center;
-    gap: 8px; /* Abstand zwischen Icon und Text */
+  max-width: 320px;
 }
 
-.angebot h3 .icon svg {
-    width: 22px;
-    height: 22px;
-    stroke: #d4af37;
-    flex-shrink: 0;
+/* ------------------------------------------
+   PREMIUM MOBILE TYPOGRAFIE – FINAL VERSION
+   ------------------------------------------ */
+
+@media (max-width: 600px) {
+
+    body {
+        font-size: var(--fs-body);
+        line-height: 1.58;
+        letter-spacing: 0.1px;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    h1 {
+        font-size: var(--fs-h1);
+        font-weight: 600;
+        line-height: 1.22;
+        letter-spacing: -0.4px;
+        margin-bottom: 0.55rem;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: var(--fs-h2);
+        font-weight: 600;
+        line-height: 1.28;
+        letter-spacing: -0.25px;
+        margin-top: 1.7rem;
+        margin-bottom: 0.7rem;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: var(--fs-h3);
+        font-weight: 600;
+        line-height: 1.3;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        letter-spacing: -0.15px;
+        margin-bottom: 0.35rem;
+    }
+
+    .angebot h3 svg {
+        width: 18px;
+        height: 18px;
+        opacity: 0.9;
+    }
+
+    p {
+        font-size: var(--fs-body);
+        line-height: 1.58;
+        margin-bottom: 0.85rem;
+        letter-spacing: 0.05px;
+    }
+
+    ul.facts li {
+        font-size: var(--fs-body);
+        line-height: 1.45;
+        margin-bottom: 0.35rem;
+    }
+
+    .testimonial {
+        font-size: var(--fs-body);
+        line-height: 1.55;
+        opacity: 0.95;
+    }
+
+    .hero p {
+        font-size: var(--fs-body);
+        opacity: 0.9;
+    }
+
+    .button {
+        font-size: var(--fs-body);
+        padding: 12px 14px;
+        letter-spacing: 0.2px;
+    }
+}
+
+/* ------------------------------------------
+   PREMIUM DESKTOP TYPOGRAFIE – FINAL VERSION
+   ------------------------------------------ */
+
+@media (min-width: 601px) {
+
+    /* Grundtypografie */
+    body {
+        font-size: 1.05rem;
+        line-height: 1.65;
+        letter-spacing: 0.1px;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+    }
+
+    /* H1 – edel, ruhig, mystisch */
+    h1 {
+        font-size: 2.1rem;          /* vorher 2em → jetzt harmonisch */
+        font-weight: 600;
+        line-height: 1.25;
+        letter-spacing: -0.4px;
+        margin-bottom: 0.8rem;
+        text-align: center;
+    }
+
+    /* H2 – weniger wuchtig, mehr Premium */
+    h2 {
+        font-size: 1.65rem;         /* vorher 1.8em → jetzt ruhiger */
+        font-weight: 600;
+        line-height: 1.3;
+        letter-spacing: -0.2px;
+        margin-top: 2.2rem;
+        margin-bottom: 1.2rem;
+        text-align: center;
+    }
+
+    /* H3 – klarer Abstand zu H2 */
+    h3 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        line-height: 1.35;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        letter-spacing: -0.1px;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Icons in H3 */
+    .angebot h3 svg {
+        width: 22px;
+        height: 22px;
+        opacity: 0.95;
+    }
+
+    /* Absätze */
+    p {
+        font-size: 1.05rem;
+        line-height: 1.65;
+        margin-bottom: 1.1rem;
+        letter-spacing: 0.05px;
+    }
+
+    /* Listen */
+    ul.facts li {
+        font-size: 1.05rem;
+        line-height: 1.5;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Testimonials */
+    .testimonial {
+        font-size: 1.05rem;
+        line-height: 1.6;
+        opacity: 0.95;
+    }
+
+    /* Buttons – weniger massiv auf Desktop */
+    .button {
+        font-size: 1.05rem;
+        padding: 14px 18px;
+        max-width: 360px;
+        letter-spacing: 0.15px;
+    }
+
+    /* Hero-Text */
+    .hero p {
+        font-size: 1.1rem;
+        line-height: 1.55;
+    }
 }
