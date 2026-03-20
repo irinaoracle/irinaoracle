@@ -50,7 +50,7 @@ nav {
   background: rgba(18, 10, 31, 0.85);
   backdrop-filter: blur(6px);
   text-align: center;
-  padding: 8px;
+  padding: 2px;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -59,7 +59,7 @@ nav {
 nav a {
   color: var(--text-light);
   text-decoration: none;
-  margin: 0 10px;
+  margin: 0 8px;
   font-weight: 600;
   font-size: 0.88em;
   transition: color 0.2s ease;
