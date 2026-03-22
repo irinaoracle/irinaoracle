@@ -769,6 +769,11 @@ footer {
         padding: 16px 32px !important;
     }
 }
+@media (min-width: 1024px) {
+    #kontakt .button .icon {
+        margin-right: 10px;
+    }
+}
 
     #kontakt .simple-box {
         text-align: center !important;
