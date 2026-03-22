@@ -795,18 +795,18 @@ footer {
     }
 }
 
+/* --- KONTAKT BUTTON DESKTOP --- */
 @media (min-width: 1024px) {
     #kontakt .simple-box {
         text-align: center;
     }
-}
-@media (min-width: 1024px) {
+
     #kontakt .button {
         width: auto;
         max-width: none;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+        display: inline-flex;
+        justify-content: center;
+        margin: 16px auto 0;
         padding: 16px 32px;
     }
 }
