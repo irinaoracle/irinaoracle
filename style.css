@@ -774,6 +774,11 @@ footer {
         margin-right: 10px;
     }
 }
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
     #kontakt .simple-box {
         text-align: center !important;
