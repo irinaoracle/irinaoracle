@@ -808,3 +808,11 @@ footer {
         text-align: center;
     }
 }
+@media (min-width: 1024px) {
+    #kontakt .button {
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: fit-content !important;
+    }
+}
