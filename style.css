@@ -86,7 +86,7 @@ nav a:hover {
   background-image: url('hero_mystic.jpg');
   background-size: cover;
   background-position: center top;
-  background-attachment: fixed;
+  background-attachment: scroll;
   min-height: 460px;
   display: flex;
   flex-direction: column;
