@@ -803,10 +803,6 @@ footer {
         justify-content: center;
         gap: 12px;
     }
-
-    #kontakt .simple-box {
-        text-align: center;
-    }
 }
 @media (min-width: 1024px) {
     #kontakt .button {
@@ -814,5 +810,10 @@ footer {
         margin-left: auto !important;
         margin-right: auto !important;
         width: fit-content !important;
+    }
+}
+@media (min-width: 1024px) {
+    #kontakt .simple-box {
+        text-align: center;
     }
 }
