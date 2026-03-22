@@ -754,6 +754,7 @@ footer {
         padding: 16px 32px !important;
         min-width: 260px !important;
         text-align: center !important;
+        margin-right: 10px !important;
     }
 
     #kontakt .simple-box {
