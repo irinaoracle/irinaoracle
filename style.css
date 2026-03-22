@@ -1,9 +1,13 @@
+/* ----------------------------------------------------
+   GLOBAL SETTINGS & VARIABLES
+---------------------------------------------------- */
+
 /* Smooth Scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Farben */
+/* Farb- und Typo-Variablen */
 :root {
   --violett-dark: #120a1f;
   --violett: #6a4ea3;
@@ -27,14 +31,17 @@ body {
   color: var(--text-light);
 }
 
-/* Header */
+/* ----------------------------------------------------
+   HEADER & NAVIGATION
+---------------------------------------------------- */
+
 header {
   background-color: var(--violett-dark);
   padding: 22px;
   text-align: center;
 }
 
-/* Header-Titel soll wie H2 aussehen */
+/* Header-Titel (Premium H2-Style) */
 header .site-title {
   font-family: 'Playfair Display', serif;
   font-size: 1.8em;          /* minimal größer als section h2 */
@@ -68,7 +75,10 @@ nav a:hover {
   color: var(--gold);
 }
 
-/* HERO */
+/* ----------------------------------------------------
+   HERO SECTION
+---------------------------------------------------- */
+
 .hero {
   position: relative;
   text-align: center;
@@ -138,7 +148,10 @@ nav a:hover {
   opacity: 0.95;
 }
 
-/* BUTTONS */
+/* ----------------------------------------------------
+   BUTTON COMPONENT
+---------------------------------------------------- */
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -201,7 +214,10 @@ nav a:hover {
   color: var(--gold);
 }
 
-/* Sektionen */
+/* ----------------------------------------------------
+   SECTION LAYOUT & DIVIDER
+---------------------------------------------------- */
+
 section {
   padding: 50px 22px;
 }
@@ -224,7 +240,10 @@ section h2 {
   opacity: 0.8;
 }
 
-/* Portrait */
+/* ----------------------------------------------------
+   TYPOGRAPHY ELEMENTS (Portrait, Faktenliste)
+---------------------------------------------------- */
+
 .portrait {
   width: 100%;
   border-radius: 16px;
@@ -253,7 +272,10 @@ section h2 {
   left: 0;
 }
 
-/* Angebote */
+/* ----------------------------------------------------
+   ANGEBOT-BOX (Rahmen, Hintergrund, Typografie)
+---------------------------------------------------- */
+
 .angebot {
   background: rgba(255,255,255,0.06);
   padding: 22px;
@@ -264,6 +286,8 @@ section h2 {
     0 0 14px rgba(0,0,0,0.35),
     inset 0 0 12px rgba(255,255,255,0.05);
 }
+
+/* Titel im Angebotsblock */
 .angebot h3 {
   margin-top: 0;
   color: var(--gold);
@@ -273,6 +297,8 @@ section h2 {
   align-items: center;
   gap: 8px;
 }
+
+/* Preiszeilen im Angebotsblock */
 #preise .angebot p {
   display: flex;
   justify-content: space-between;
@@ -283,6 +309,7 @@ section h2 {
   border-bottom: 1px solid rgba(255,255,255,0.08);
   padding-bottom: 6px;
 }
+
 #preise .angebot p span {
   background: rgba(255,215,0,0.12);
   padding: 2px 10px;
@@ -290,10 +317,16 @@ section h2 {
   color: var(--gold);
   font-weight: 600;
 }
+
+/* ----------------------------------------------------
+   ACCORDION – Grundstruktur
+---------------------------------------------------- */
+
 .accordion {
     margin-top: 20px;
 }
 
+/* Header (Button) */
 .accordion-header {
     width: 100%;
     background: rgba(255,255,255,0.05);
@@ -307,12 +340,33 @@ section h2 {
     gap: 10px;
     cursor: pointer;
     margin-bottom: 8px;
+    position: relative;
+    padding-right: 28px; /* Platz für Pfeil */
 }
 
+/* Pfeil rechts */
+.accordion-header::after {
+    content: "›"; /* eleganter Pfeil */
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    font-size: 1.2em;
+    color: var(--gold);
+    transition: transform 0.25s ease;
+}
+
+/* Pfeil gedreht bei aktivem Element */
+.accordion-item.active .accordion-header::after {
+    transform: translateY(-50%) rotate(90deg);
+}
+
+/* Icon links */
 .accordion-header .icon {
     font-size: 1.2em;
 }
 
+/* Inhalt */
 .accordion-content {
     display: none;
     padding: 0 4px 10px 4px;
@@ -321,6 +375,11 @@ section h2 {
 .accordion-item.active .accordion-content {
     display: block;
 }
+
+/* ----------------------------------------------------
+   SIMPLE-BOX VARIANTE (falls genutzt)
+---------------------------------------------------- */
+
 .simple-box .accordion {
     margin-top: 10px;
 }
@@ -339,7 +398,11 @@ section h2 {
 .simple-box .accordion-content p {
     margin: 6px 0;
 }
-/* Ritual-Akkordeon: Mobile Fix */
+
+/* ----------------------------------------------------
+   RITUAL-ACCORDION – Mobile & Feintuning
+---------------------------------------------------- */
+
 .angebot .accordion-header {
     padding: 10px 12px;
     font-size: 0.95em;
@@ -364,23 +427,32 @@ section h2 {
 .angebot .accordion-item {
     width: 100%;
 }
+
 /* Preis immer in einer Zeile */
 .price {
     white-space: nowrap;
     float: right;
 }
+
+/* Untertitel unter dem Header */
 .header-sub {
     font-size: 0.85em;
     opacity: 0.8;
     margin-left: 28px; /* damit es unter dem Text einrückt */
     margin-top: 2px;
 }
+
+/* Titelzeile mit Icon */
 .header-top {
     display: flex;
     align-items: center;
     gap: 8px;
 }
-/* Testimonials */
+
+/* ----------------------------------------------------
+   TESTIMONIALS & SIMPLE BOX
+---------------------------------------------------- */
+
 .testimonial {
   background: rgba(255,255,255,0.06);
   padding: 18px;
@@ -410,6 +482,11 @@ section h2 {
     margin-top: 16px;
     padding: 14px 18px; /* etwas mehr Luft */
 }
+
+/* ----------------------------------------------------
+   ANIMATIONEN & EFFECTS
+---------------------------------------------------- */
+
 /* Fade-In */
 .fade-in {
   opacity: 0;
@@ -464,7 +541,10 @@ body.scrolled .scroll-top {
   opacity: 1;
 }
 
-/* Footer */
+/* ----------------------------------------------------
+   FOOTER
+---------------------------------------------------- */
+
 footer {
   text-align: center;
   padding: 25px;
@@ -474,7 +554,10 @@ footer {
   border-top: 1px solid rgba(255,255,255,0.1);
 }
 
-/* Kontaktbereich */
+/* ----------------------------------------------------
+   KONTAKTBEREICH
+---------------------------------------------------- */
+
 #kontakt .facts {
   padding-left: 0;
   margin-left: 0;
@@ -509,7 +592,7 @@ footer {
 
 /* ------------------------------------------
    PREMIUM MOBILE TYPOGRAFIE – FINAL VERSION
-   ------------------------------------------ */
+------------------------------------------ */
 
 @media (max-width: 600px) {
 
@@ -589,7 +672,7 @@ footer {
 
 /* ------------------------------------------
    PREMIUM DESKTOP TYPOGRAFIE – FINAL VERSION
-   ------------------------------------------ */
+------------------------------------------ */
 
 @media (min-width: 601px) {
 
