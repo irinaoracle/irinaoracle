@@ -748,15 +748,16 @@ footer {
         height: 26px;
     }
 @media (min-width: 1024px) {
-    #kontakt .simple-box {
-        text-align: center; /* Button zentrieren */
+    #kontakt .simple-box .button.primary {
+        width: auto !important;
+        display: inline-block !important;
+        padding: 16px 32px !important;
+        min-width: 260px !important;
+        text-align: center !important;
     }
 
-    #kontakt .simple-box .button {
-        width: auto; /* nicht mehr 100% */
-        display: inline-block; /* natürliche Breite */
-        padding: 16px 32px; /* mehr Luft */
-        min-width: 260px; /* verhindert Gequetschtsein */
+    #kontakt .simple-box {
+        text-align: center !important;
     }
 }
     /* --- ANGEBOT BOX --- */
