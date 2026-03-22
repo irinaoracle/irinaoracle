@@ -794,26 +794,19 @@ footer {
         line-height: 1.65;
     }
 }
-@media (min-width: 1024px) {
-    #kontakt .button {
-        max-width: none !important;
-        width: auto !important;
-        padding: 16px 32px;
-        display: inline-flex;
-        justify-content: center;
-        gap: 12px;
-    }
-}
-@media (min-width: 1024px) {
-    #kontakt .button {
-        display: block !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-        width: fit-content !important;
-    }
-}
+
 @media (min-width: 1024px) {
     #kontakt .simple-box {
         text-align: center;
+    }
+}
+@media (min-width: 1024px) {
+    #kontakt .button {
+        width: auto;
+        max-width: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 16px 32px;
     }
 }
