@@ -748,19 +748,6 @@ footer {
         height: 26px;
     }
 @media (min-width: 1024px) {
-    #kontakt .simple-box .button.primary {
-        width: auto !important;
-        display: inline-block !important;
-        padding: 16px 32px !important;
-        min-width: 260px !important;
-        text-align: center !important;
-    }
-@media (min-width: 1024px) {
-    #kontakt .simple-box .button {
-        padding: 16px 32px !important; /* mehr Luft links + rechts */
-    }
-} 
-@media (min-width: 1024px) {
     #kontakt .button {
         max-width: 420px !important; /* genug Platz für Icon + Text */
         width: auto !important;
@@ -768,23 +755,8 @@ footer {
         justify-content: center !important;
         padding: 16px 32px !important;
     }
-}
-@media (min-width: 1024px) {
-    #kontakt .button .icon {
-        margin-right: 10px;
-    }
-}
-.icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+} 
 
-
-    #kontakt .simple-box {
-        text-align: center !important;
-    }
-}
     /* --- ANGEBOT BOX --- */
     .angebot {
         padding: 32px 36px;
@@ -829,15 +801,5 @@ footer {
         margin: 40px auto;
         font-size: 1.08rem;
         line-height: 1.65;
-    }
-}
-@media (min-width: 1024px) {
-    #kontakt .button {
-        max-width: 420px !important; /* genug Platz für Icon + Text */
-        width: auto !important;
-        padding: 16px 32px !important;
-        display: inline-flex !important;
-        justify-content: center !important;
-        gap: 12px !important;
     }
 }
