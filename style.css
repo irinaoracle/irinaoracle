@@ -762,8 +762,11 @@ footer {
 } 
 @media (min-width: 1024px) {
     #kontakt .button {
-        max-width: 380px !important; /* gleiche Breite wie oben */
-        padding: 16px 26px !important; /* Desktop-Button-Padding */
+        max-width: 420px !important; /* genug Platz für Icon + Text */
+        width: auto !important;
+        display: inline-flex !important;
+        justify-content: center !important;
+        padding: 16px 32px !important;
     }
 }
 
