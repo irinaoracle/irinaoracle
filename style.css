@@ -796,10 +796,15 @@ footer {
 }
 @media (min-width: 1024px) {
     #kontakt .button {
-        max-width: 620px !important; /* genug Platz für Icon + Text */
+        max-width: none !important;
         width: auto !important;
-        display: inline-flex !important;
-        justify-content: center !important;
-        padding: 16px 32px !important;
+        padding: 16px 32px;
+        display: inline-flex;
+        justify-content: center;
+        gap: 12px;
     }
-} 
+
+    #kontakt .simple-box {
+        text-align: center;
+    }
+}
