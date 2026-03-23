@@ -512,7 +512,9 @@ section h2 {
     padding: 14px 18px; /* etwas mehr Luft */
 }
 
-
+/* ----------------------------------------------------
+   Boutique 
+---------------------------------------------------- */
 .boutique-prices p {
   display: flex;
   justify-content: space-between;
@@ -539,6 +541,9 @@ section h2 {
     font-weight: 600;
     color: var(--gold);
     letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 
