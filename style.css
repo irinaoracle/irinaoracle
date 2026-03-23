@@ -85,6 +85,7 @@ nav a:hover {
   padding: 100px 20px 70px;
   /* Fallback für alte Browser */
   background-image: url('hero_mystic.jpg');
+  background-image: url('hero_mystic.webp');  
   /* Modernes Format für schnelle Browser */
   background-image: url('hero_mystic.avif');
   background-size: cover;
