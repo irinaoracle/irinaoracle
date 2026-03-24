@@ -459,6 +459,21 @@ section h2 {
     width: 100%;
 }
 
+.angebot-desc {
+    display: none;
+    padding: 10px 0 15px 0;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    opacity: 0.9;
+}
+.angebot-item {
+    cursor: pointer;
+}
+.angebot-item:hover {
+    color: var(--gold);
+    transition: 0.25s ease;
+}
+
 /* Preis immer in einer Zeile */
 .price {
     white-space: nowrap;

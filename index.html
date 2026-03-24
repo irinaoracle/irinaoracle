@@ -414,7 +414,15 @@
         <div class="header-sub">Любовь, гармония, отношения</div>
     </button>
     <div class="accordion-content">
-        <p><strong>Любовный ритуал</strong> <span class="price">25&nbsp;000&nbsp;₽</span></p>
+        <p class="angebot-item">
+        
+    <strong>Любовный ритуал</strong>
+    <span class="price">25&nbsp;000&nbsp;₽</span>
+</p>
+<div class="angebot-desc">
+    Этот ритуал направлен на укрепление связи, усиление притяжения и гармонизацию отношений.
+</div>
+
         <p><strong>Защита любовных отношений</strong> <span class="price">от&nbsp;4&nbsp;000&nbsp;₽</span></p>
 
         <!-- Новые ритуалы -->
@@ -730,6 +738,15 @@ document.querySelectorAll('.expandable').forEach(box => {
         toggle.textContent = box.classList.contains('active') 
             ? 'Показать меньше' 
             : 'Показать больше';
+    });
+});
+/* Neues Script für „Erläuterung zu Angeboten“ */
+document.querySelectorAll('.angebot-item').forEach(item => {
+    item.addEventListener('click', () => {
+        const desc = item.nextElementSibling;
+        if (desc && desc.classList.contains('angebot-desc')) {
+            desc.style.display = desc.style.display === 'block' ? 'none' : 'block';
+        }
     });
 });
 </script>
