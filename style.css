@@ -815,6 +815,15 @@ footer {
         font-size: 1.12rem;
         border-radius: 12px;
     }
+    /* --- Accordion Header Sub --- */
+    .accordion-header .header-sub {
+    display: block;
+    width: 100%;
+    margin-left: 34px; /* dein bestehender Wert */
+    }
+    
+    
+    
 
     .accordion-content {
         padding: 10px 6px 16px 6px;
