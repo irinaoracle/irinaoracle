@@ -840,15 +840,13 @@ footer {
 /* --- KONTAKT BUTTON DESKTOP --- */
 @media (min-width: 1024px) {
     #kontakt .simple-box {
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     #kontakt .button {
-        width: auto;
-        max-width: none;
-        display: inline-flex;
-        justify-content: center;
-        margin: 16px auto 0;
-        padding: 16px 32px;
+        width: 100%;
+        max-width: 320px;
     }
 }
