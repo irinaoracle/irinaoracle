@@ -529,6 +529,17 @@ section h2 {
     padding: 14px 18px; /* etwas mehr Luft */
 }
 
+
+#kundenstimmen {
+    background-color: #1A1327;
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+    color: #f2e9ff;
+    box-shadow: 0 0 30px rgba(0,0,0,0.4);
+}
+
+
 /* ----------------------------------------------------
    Boutique 
 ---------------------------------------------------- */
