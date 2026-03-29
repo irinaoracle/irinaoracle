@@ -1,4 +1,33 @@
+# -----------------------------------------
+# Robots.txt für irinaoracle.ru
+# Optimiert für Google, Yandex und Bing
+# -----------------------------------------
+
+# Sitemap
+Sitemap: https://irinaoracle.ru/sitemap.xml
+
+# Standard-Regeln für alle Bots
 User-agent: *
 Allow: /
 
-Sitemap: https://irinaoracle.ru/sitemap.xml
+# Unerwünschte Bots blockieren (Scraper, Spam, AI-Scraper)
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+# Yandex-Optimierung
+Host: irinaoracle.ru
+
+# Entfernt Tracking-Parameter aus Indexierung (optional)
+Clean-param: utm_source&utm_medium&utm_campaign&utm_term&utm_content /
