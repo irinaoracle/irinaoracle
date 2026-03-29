@@ -87,11 +87,12 @@
     }
     </script>
 
-    <!-- Service Schema -->
+    <!-- Service Schema (Offers) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Service",
+      "name": "Услуги таролога Ирины",
       "serviceType": "Таро, руны, оракул, ритуалы и магические изделия",
       "provider": {
         "@type": "Person",
@@ -147,11 +148,12 @@
       "@type": "Product",
       "name": "Магические изделия ручной работы",
       "description": "Амулеты, браслеты, обереги и свечи, созданные вручную и энергетически заряженные.",
+      "category": "Амулеты, браслеты, обереги, свечи",
       "brand": {
         "@type": "Person",
         "name": "Irina Nikonova"
       },
-      "category": "Амулеты, браслеты, обереги, свечи",
+      "image": "https://irinaoracle.ru/boutique.jpg",
       "inLanguage": "ru-RU",
       "offers": {
         "@type": "AggregateOffer",
@@ -159,17 +161,23 @@
         "lowPrice": "1500",
         "highPrice": "9000",
         "offerCount": "20",
-        "description": "Диапазон цен на магические изделия: амулеты, браслеты, обереги и свечи."
+        "availability": "https://schema.org/InStock",
+        "url": "https://irinaoracle.ru"
       }
     }
     </script>
 
-    <!-- Review Schema -->
+    <!-- Review Schema (Service Reviews) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "serviceType": "Услуги таролога Ирины",
+      "name": "Услуги таролога Ирины",
+      "serviceType": "Таро, ритуалы и духовные консультации",
+      "provider": {
+        "@type": "Person",
+        "name": "Irina Nikonova"
+      },
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "5.0",
@@ -178,28 +186,32 @@
       "review": [
         {
           "@type": "Review",
-          "author": "Александра",
+          "author": { "@type": "Person", "name": "Александра" },
           "reviewBody": "Здравствуйте, Ирина, хороший ритуал, работает, главное соблюдать сказанные вами указания. Спасибо 🎃",
           "reviewRating": { "@type": "Rating", "ratingValue": "5" }
         },
         {
           "@type": "Review",
-          "author": "Ксения",
-          "reviewBody": "Ирина, гадание на оракуле Ленорман, просто восхитительное! Все в точку было сказано, я в полном восторге. Разъясняете все великолепно, вопросов никаких не остается. Каждое обращение к вам — это 100% точный ответ. Спасибо вам большое, вы самая лучшая ❤️❤️❤️❤️",
+          "author": { "@type": "Person", "name": "Ксения" },
+          "reviewBody": "Ирина, гадание на оракуле Ленорман, просто восхитительное! Все в точку было сказано, я в полном восторге. Разъясняете все великолепно, вопросов никаких не остается. Я уверена, что все будет именно так, как вы сказали. Каждое обращение к вам — это 100% точный ответ. Спасибо вам большое, вы самая лучшая ❤️❤️❤️❤️",
           "reviewRating": { "@type": "Rating", "ratingValue": "5" }
         },
         {
           "@type": "Review",
-          "author": "Ольга",
+          "author": { "@type": "Person", "name": "Ольга" },
           "reviewBody": "Ирина, ещё раз хочу вас поблагодарить. Вы лучшая! Здоровья и мира Вам!",
           "reviewRating": { "@type": "Rating", "ratingValue": "5" }
         }
       ]
     }
     </script>
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-<script data-goatcounter="https://irinaoracle.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- GoatCounter -->
+    <script data-goatcounter="https://irinaoracle.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
 
