@@ -68,7 +68,7 @@ nav a {
   text-decoration: none;
   margin: 0 2px;
   font-weight: 600;
-  font-size: 0.88em;
+  font-size: 0.86em;
   transition: color 0.2s ease;
 }
 nav a:hover {
@@ -200,6 +200,12 @@ nav a:hover {
 .button.primary:hover {
   background: linear-gradient(135deg, #ffeaa0, #f2c86a);
 }
+.button.primary .icon {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    top: 6px; /* ← DAS ist die Lösung */
+}
 
 /* Secondary Buttons */
 .button.secondary {
@@ -301,7 +307,7 @@ section h2 {
 }
 
 /* Preiszeilen im Angebotsblock */
-#preise .angebot p {
+#ceny .angebot p {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -312,7 +318,7 @@ section h2 {
   padding-bottom: 6px;
 }
 
-#preise .angebot p span {
+#ceny .angebot p span {
   background: rgba(255,215,0,0.12);
   padding: 2px 10px;
   border-radius: 6px;
@@ -619,6 +625,140 @@ section h2 {
 }
 body.scrolled .scroll-top {
   opacity: 1;
+}
+
+/* ----------------------------------------------------
+   WISSENSBEREICH – NEUES LAYOUT
+---------------------------------------------------- */
+
+/* Hauptbereich */
+.knowledge-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 22px;
+}
+
+/* Titel */
+.knowledge-page h1 {
+    text-align: center;
+    color: var(--gold);
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+/* Untertitel / Abschnittstitel */
+.knowledge-page h2 {
+    color: var(--gold-soft);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    margin-top: 40px;
+    margin-bottom: 12px;
+}
+
+/* Text */
+.knowledge-page p,
+.knowledge-page li {
+    line-height: 1.6;
+    font-size: 1rem;
+    color: var(--text-light);
+}
+
+/* Boxen */
+.knowledge-box {
+    background: rgba(255,255,255,0.04);
+    padding: 22px 24px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.10);
+    box-shadow:
+        0 0 12px rgba(0,0,0,0.22),
+        inset 0 0 6px rgba(255,255,255,0.03);
+    margin: 30px 0;
+}
+
+/* Inhaltsverzeichnis */
+.knowledge-toc h3 {
+    color: var(--gold);
+    margin-bottom: 8px;
+}
+
+.knowledge-toc a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+.knowledge-toc a:hover {
+    color: var(--gold);
+    text-shadow: 0 0 6px rgba(212,175,55,0.5);
+}
+
+.knowledge-toc ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 0 20px 0;
+}
+
+.knowledge-toc li {
+    margin: 6px 0;
+    padding-left: 16px;
+    position: relative;
+}
+
+.knowledge-toc li::before {
+    content: "•";
+    color: var(--gold);
+    position: absolute;
+    left: 0;
+}
+
+/* Zurück-Link */
+.back-link a {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Bilder */
+.knowledge-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    opacity: 0.95;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+}
+
+
+/* Anker-Offset für Sticky Navigation */
+h3[id] {
+    scroll-margin-top: 40px; /* passt zu deiner globalen + subnav */
+}
+
+/* Einheitliches Styling für Inhaltsverzeichnis-Links */
+a[href*="#"] {
+    color: #f5f5dc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.toc-main {
+    color: #f5f5dc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.toc-main:hover {
+    color: #d4af37;
+    text-shadow: 0 0 6px rgba(212,175,55,0.5);
+}
+
+.knowledge-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem; /* kleiner als die Seitenüberschrift */
+    color: var(--gold);
+    text-align: left; /* oder center – wie im Screenshot */
+    margin-bottom: 10px;
+    letter-spacing: 0.3px;
 }
 
 /* ----------------------------------------------------
