@@ -1,6 +1,6 @@
 # -----------------------------------------
 # Robots.txt für irinaoracle.ru
-# Optimiert für Google, Yandex und Bing
+# Maximal SEO-freundlich für Google, Yandex, Bing
 # -----------------------------------------
 
 # Sitemap
@@ -10,7 +10,18 @@ Sitemap: https://irinaoracle.ru/sitemap.xml
 User-agent: *
 Allow: /
 
-# Unerwünschte Bots blockieren (Scraper, Spam, AI-Scraper)
+# Wichtige Ressourcen explizit erlauben (SEO-relevant)
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.webp$
+Allow: /*.svg$
+Allow: /*.woff$
+Allow: /*.woff2$
+
+# Blockiere aggressive Scraper (SEO-sicher)
 User-agent: AhrefsBot
 Disallow: /
 
@@ -26,8 +37,22 @@ Disallow: /
 User-agent: BLEXBot
 Disallow: /
 
+# Optional: Blockiere AI-Scraper (schadet SEO nicht)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
 # Yandex-Optimierung
 Host: irinaoracle.ru
 
-# Entfernt Tracking-Parameter aus Indexierung (optional)
+# Entfernt Tracking-Parameter aus Indexierung
 Clean-param: utm_source&utm_medium&utm_campaign&utm_term&utm_content /
+
+# Optional: Crawl-Delay für Yandex (schont Server, SEO-neutral)
+User-agent: Yandex
+Crawl-delay: 1
