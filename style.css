@@ -729,7 +729,6 @@ body.scrolled .scroll-top {
     box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
 }
 
-
 /* Anker-Offset für Sticky Navigation */
 h3[id] {
     scroll-margin-top: 40px; /* passt zu deiner globalen + subnav */
@@ -746,6 +745,10 @@ a[href*="#"] {
     text-decoration: none;
     transition: color 0.3s ease;
 }
+.toc-sub {
+    color: #f5f5dc;
+    text-decoration: none;
+}
 
 .toc-main:hover {
     color: #d4af37;
@@ -760,7 +763,19 @@ a[href*="#"] {
     margin-bottom: 10px;
     letter-spacing: 0.3px;
 }
-
+/* Versteckte h1 Überschrift */
+.visually-hidden {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.facts a:hover,
+a.toc-main:hover,
+a.toc-sub:hover {
+    color: #d4af37;
+}
 /* ----------------------------------------------------
    FOOTER
 ---------------------------------------------------- */
