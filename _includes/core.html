@@ -1,11 +1,13 @@
 <script>
 (function() {
+    var p = "https://mc." + "yandex." + "ru/watch/";
+    var id = "108410102";
+
     var url  = encodeURIComponent(location.href);
     var ref  = encodeURIComponent(document.referrer);
     var rand = Math.random();
 
-    new Image().src =
-        "https://mc.yandex.ru/watch/108410102" +
+    var params =
         "?page-url=" + url +
         "&ref=" + ref +
         "&rand=" + rand +
@@ -15,6 +17,8 @@
         "&accurateTrackBounce=1" +
         "&ecommerce=dataLayer" +
         "&ssr=1";
+
+    new Image().src = p + id + params;
 })();
 </script>
 <!-- Goat -->
