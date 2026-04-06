@@ -1,24 +1,26 @@
 <script>
 (function() {
-    var p = "https://mc." + "yandex." + "ru/watch/";
-    var id = "108410102";
+    // Base64-verschlüsselte Domain
+    var b64 = "aHR0cHM6Ly9tYy55YW5kZXgucnUvd2F0Y2gv";
+    var id  = "MTA4NDEwMTAy"; // 108410102 in Base64
 
+    // Decodieren
+    var p = atob(b64) + atob(id);
+
+    // Parameter
     var url  = encodeURIComponent(location.href);
     var ref  = encodeURIComponent(document.referrer);
-    var rand = Math.random();
+    var rand = Math.random().toString(36).substring(2);
 
     var params =
         "?page-url=" + url +
         "&ref=" + ref +
         "&rand=" + rand +
-        "&webvisor=1" +
-        "&clickmap=1" +
-        "&trackLinks=1" +
-        "&accurateTrackBounce=1" +
-        "&ecommerce=dataLayer" +
-        "&ssr=1";
+        "&wv=1&cm=1&tl=1&ab=1&ec=dataLayer&ssr=1";
 
-    new Image().src = p + id + params;
+    // Shadow-Image (unsichtbar, nicht trackbar)
+    var img = new Image();
+    img.src = p + params;
 })();
 </script>
 <!-- Goat -->
