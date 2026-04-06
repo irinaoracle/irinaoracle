@@ -1,7 +1,7 @@
 <script>
 (function() {
-    var url = encodeURIComponent(location.href);
-    var ref = encodeURIComponent(document.referrer);
+    var url  = encodeURIComponent(location.href);
+    var ref  = encodeURIComponent(document.referrer);
     var rand = Math.random();
 
     new Image().src =
@@ -12,7 +12,9 @@
         "&webvisor=1" +
         "&clickmap=1" +
         "&trackLinks=1" +
-        "&accurateTrackBounce=1";
+        "&accurateTrackBounce=1" +
+        "&ecommerce=dataLayer" +
+        "&ssr=1";
 })();
 </script>
 <!-- Goat -->
