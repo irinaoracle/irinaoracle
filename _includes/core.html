@@ -1,28 +1,2 @@
-<script>
-(function() {
-    // Base64-verschlüsselte Domain
-    var b64 = "aHR0cHM6Ly9tYy55YW5kZXgucnUvd2F0Y2gv";
-    var id  = "MTA4NDEwMTAy"; // 108410102 in Base64
-
-    // Decodieren
-    var p = atob(b64) + atob(id);
-
-    // Parameter
-    var url  = encodeURIComponent(location.href);
-    var ref  = encodeURIComponent(document.referrer);
-    var rand = Math.random().toString(36).substring(2);
-
-    var params =
-        "?page-url=" + url +
-        "&ref=" + ref +
-        "&rand=" + rand +
-        "&wv=1&cm=1&tl=1&ab=1&ec=dataLayer&ssr=1";
-
-    // Shadow-Image (unsichtbar, nicht trackbar)
-    var img = new Image();
-    img.src = p + params;
-})();
-</script>
-<!-- G -->
 <script data-goatcounter="https://irinaoracle-gc.toppident.workers.dev/api/collect"
         async src="https://irinaoracle-gc.toppident.workers.dev/assets/loader.js"></script>
