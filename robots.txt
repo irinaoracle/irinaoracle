@@ -21,6 +21,8 @@ Allow: /*.svg$
 Allow: /*.woff$
 Allow: /*.woff2$
 
+Disallow: /privacy.html
+
 # Blockiere aggressive Scraper
 User-agent: AhrefsBot
 Disallow: /
