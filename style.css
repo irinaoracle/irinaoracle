@@ -1027,3 +1027,24 @@ footer {
         max-width: 400px;
     }
 }
+
+/* Container für das VK-Widget */
+.vk-widget-wrapper {
+  width: 100% !important;
+  display: block;
+}
+
+.vk-widget-wrapper iframe {
+  width: 100% !important;
+}
+
+/* Gilt nur für Smartphones (Bildschirme bis 768px Breite) */
+@media screen and (max-width: 768px) {
+  .vk-widget-wrapper {
+    max-width: 301px !important;
+    margin: 0 auto !important; /* Zentriert das Widget auf dem Handy */
+  }
+  .vk-widget-wrapper iframe {
+    max-width: 301px !important;
+  }
+}
