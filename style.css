@@ -1028,16 +1028,20 @@ footer {
     }
 }
 
-/* Container für das VK-Widget */
+/* Container für das VK-Widget (Desktop & Allgemein) */
 .vk-widget-wrapper {
   width: 100% !important;
   max-width: 650px !important;
-  **margin: 0 auto !important;
-  display: block;
+  margin: 0 auto !important;     /* Zentriert den Block */
+  display: flex !important;      /* Nutzt Flexbox zum perfekten Ausrichten */
+  justify-content: center !important; /* Zentriert den Inhalt waagerecht */
 }
 
 .vk-widget-wrapper iframe {
   width: 100% !important;
+  max-width: 650px !important;
+  margin: 0 auto !important;     /* Zentriert das innere iFrame */
+  display: block !important;
 }
 
 /* Gilt nur für Smartphones (Bildschirme bis 768px Breite) */
