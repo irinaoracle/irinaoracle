@@ -1043,10 +1043,17 @@ footer {
 /* Gilt nur für Smartphones (Bildschirme bis 768px Breite) */
 @media screen and (max-width: 768px) {
   .vk-widget-wrapper {
+    width: 301px !important;
     max-width: 301px !important;
-    margin: 0 auto !important; /* Zentriert das Widget auf dem Handy */
+    overflow: hidden !important; /* Schneidet Überstände radikal ab */
+    margin: 0 auto !important;
   }
+  
+  /* Dieser Befehl zwingt das innere VK-Fenster, mitsamt den Bildern, 
+     sich exakt an die schmale Smartphone-Breite anzupassen */
   .vk-widget-wrapper iframe {
-    max-width: 301px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
   }
 }
