@@ -1031,6 +1031,7 @@ footer {
 /* Container für das VK-Widget */
 .vk-widget-wrapper {
   width: 100% !important;
+  max-width: 650px !important;
   **margin: 0 auto !important;
   display: block;
 }
