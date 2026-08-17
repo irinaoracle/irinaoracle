@@ -1048,16 +1048,16 @@ footer {
 @media screen and (max-width: 768px) {
   .vk-widget-wrapper {
     width: 301px !important;
-    max-width: 301px !important;
-    overflow: hidden !important; /* Schneidet Überstände radikal ab */
+    height: auto !important;
     margin: 0 auto !important;
+    overflow: visible !important;
   }
   
-  /* Dieser Befehl zwingt das innere VK-Fenster, mitsamt den Bildern, 
-     sich exakt an die schmale Smartphone-Breite anzupassen */
+  /* Wir zoomen das gesamte Widget auf 46% herunter, 
+     damit aus 650px PC-Breite exakt 301px Handy-Breite werden */
   .vk-widget-wrapper iframe {
-    width: 100% !important;
-    max-width: 100% !important;
-    display: block !important;
+    width: 650px !important;
+    transform: scale(0.46) !important;
+    transform-origin: top center !important;
   }
 }
